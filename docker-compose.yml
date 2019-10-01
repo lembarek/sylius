@@ -40,7 +40,7 @@ services:
       # you may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
       # - ./docker/mysql/data:/var/lib/mysql:rw,delegated
     ports:
-      - "3306:3306"
+      - "3366:3306"
 
   nodejs:
     build:
@@ -81,7 +81,7 @@ services:
       # - ./public/media:/srv/sylius/public/media:ro
       - public-media:/srv/sylius/public/media:ro,nocopy
     ports:
-      - "80:80"
+      - "8080:80"
 
   mailhog:
     # do not use in production!
